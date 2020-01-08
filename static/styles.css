@@ -1,0 +1,34 @@
+img.rounded-edges {
+    border-radius: 20px;
+}
+
+a.link-button {
+    font-size: 150%;
+    font-family: cursive; 
+}
+
+li {
+    list-style-type: none;
+}
+
+.footer {
+
+    height:24px; 
+    width: 100%; 
+    background-image: none;
+    background-repeat: repeat;
+    background-attachment: scroll;
+    background-position: 0% 0%;
+    position: fixed;
+    bottom: 5pt;
+    left: 0pt;
+
+}   
+
+.footer_contents {
+
+    height:24px; 
+    width: 100%; 
+    margin:auto;
+    padding-left: 3%;
+}

@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'styles.css' %}">    
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body style="background:rgb(141, 190, 192)">
+ <div class="col-md-8 mx-auto" style="margin-top: 2%">
+     <nav class="navbar navbar-expand-lg navbar-light bg-light nav-fill w-100">
+        <li class="center-li-thing">可爱</li>
+        <li class="nav-item menu-item menu-item-object-page menu-item-home current-menu-item page_item page-item-6 current_page_item"><a class="link-button" href="{% url 'tag_view' 'photo' %}"> Photos</a></li>
+        <li class="center-li-thing">可爱</li>
+        <li class="nav-item menu-item menu-item-object-page "><a class="link-button" href="{% url 'tag_view' 'charecter_design' %}">Character Designs</a></li>
+        <li class="center-li-thing">可爱</li>
+        <li class="nav-item menu-item menu-item-object-page "><a class="link-button" href="{% url 'tag_view' 'cartoon' %}"> Cartoons</a></li>
+        <li class="center-li-thing">可爱</li>
+        <li class="nav-item menu-item menu-item-object-page "><a class="link-button" href="{% url 'tag_view' 'fine_art' %}"> Fine art</a></li>
+        <li class="center-li-thing">可爱</li>
+        <li class="nav-item menu-item menu-item-object-page "><a class="link-button" href="{% url 'tag_view' 'visual_design' %}"> Visual Designs</a></li>  
+        <li class="center-li-thing">可爱</li>
+     </nav>
+        {%block content%}{%endblock%}
+ </div>
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>      
+
+<div class="footer">
+    <div class="footer_contents">
+        <a href="">@Twitter</a>
+        <a href="">@Instagram</a>
+    </div>
+</div>
+</body>
+</html>

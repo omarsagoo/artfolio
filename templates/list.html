@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block title %} Max's Art {% endblock %}
+
+{% block content %} 
+{% if artworks %}
+    
+      {% for artwork in artworks %}
+      <div class="container bg-light" style="margin-top: 3%">
+        
+        <div class="row">
+            <div class="col-lg-10">
+                <img src="{{ artwork.image.url }}" height="92%" width="100%" style="margin-top: 3% ">
+            </div>
+            <div class="col">
+                <div>
+                        <h3>{{ artwork.title }}</h3>
+                </div>
+                <div>
+                    <small>Type: {{artwork.tag}}</small>
+                </div>
+                <div>
+                    <p>{{artwork.short_desc}}</p>
+                </div>
+                <div style="text-align:left">
+                    <small>Posted: {{artwork.time_posted}}</small>
+                </div>
+            </div>
+        </div>
+      </div>
+      {% endfor %}
+    
+  {% else %}
+    <div class="alert alert-primary" role="alert">No Art to display.</div>
+  {% endif %}
+
+{% endblock %}
